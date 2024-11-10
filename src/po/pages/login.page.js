@@ -13,9 +13,7 @@ class LoginPage {
 
   async inputCredentials(username, password) {
     await this.loginForm.inputUsername.setValue(username);
-    await browser.pause(2000);
     await this.loginForm.inputPassword.setValue(password);
-    await browser.pause(2000);
   }
 }
 
