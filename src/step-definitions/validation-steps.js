@@ -1,10 +1,9 @@
-const { Then } = require("@wdio/cucumber-framework");
 const compareText = require("./utils/compare-text");
-const inventoryPage = require("../po/pages/inventory.page");
-const loginPage = require("../po/pages/login.page");
+const { Then } = require("@wdio/cucumber-framework");
+const { pages } = require("../po");
 
 Then("I should get an error message {string}", async function (errorText) {
-  const errorMessage = await loginPage.loginForm.errorMessage.getText();
+  const errorMessage = await pages("login").loginForm.errorMessage.getText();
   return compareText(errorMessage, errorText, "be equal to");
 });
 
@@ -16,8 +15,9 @@ Then("I should be redirected to inventory page", async function () {
 Then(
   "dashboard title should {string} {string}",
   async function (shouldBeParameter, titleText) {
-    const dashboardTitle =
-      await inventoryPage.inventoryHeader.inventoryLogo.getText();
+    const dashboardTitle = await pages(
+      "inventory"
+    ).inventoryHeader.inventoryLogo.getText();
     return compareText(dashboardTitle, titleText, shouldBeParameter);
   }
 );

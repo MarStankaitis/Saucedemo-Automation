@@ -1,15 +1,15 @@
 const { Given, When } = require("@wdio/cucumber-framework");
 const clearInput = require("./utils/clear-input");
-const loginPage = require("../po/pages/login.page");
+const { pages } = require("../po");
 
 Given("I open login page", async function () {
-  return await loginPage.open();
+  return await pages("login").open();
 });
 
 When(
   "I input username: {string} and password: {string}",
   async function (username, password) {
-    return await loginPage.inputCredentials(username, password);
+    return await pages("login").inputCredentials(username, password);
   }
 );
 
@@ -18,5 +18,5 @@ When("I clear {string} input", async function (inputField) {
 });
 
 When("I click on login button", async function () {
-  return await loginPage.loginForm.loginBtn.click();
+  return await pages("login").loginForm.loginBtn.click();
 });

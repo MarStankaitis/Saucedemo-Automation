@@ -6,4 +6,4 @@ class InventoryPage {
   }
 }
 
-module.exports = new InventoryPage();
+module.exports = InventoryPage;
