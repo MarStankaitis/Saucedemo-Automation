@@ -1,10 +1,9 @@
-const LoginFormComponent = require("../components/login/loginform.component");
-const LoginHeaderComponent = require("../components/login/loginheader.component");
+const { LoginForm, LoginHeader } = require("./../components");
 
 class LoginPage {
   constructor() {
-    this.loginForm = new LoginFormComponent();
-    this.loginHeader = new LoginHeaderComponent();
+    this.loginForm = new LoginForm();
+    this.loginHeader = new LoginHeader();
   }
 
   async open() {

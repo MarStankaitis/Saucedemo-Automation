@@ -1,8 +1,8 @@
-const InventoryHeaderComponent = require("../components/inventory/inventoryheader.compenent");
+const { InventoryHeader } = require("./../components");
 
 class InventoryPage {
   constructor() {
-    this.inventoryHeader = new InventoryHeaderComponent();
+    this.inventoryHeader = new InventoryHeader();
   }
 }
 
