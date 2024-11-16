@@ -49,10 +49,7 @@ exports.config = {
   //
   capabilities: [
     {
-      browserName: "chrome",
-    },
-    {
-      browserName: "firefox",
+      browserName: process.argv[4] || "chrome",
     },
   ],
 

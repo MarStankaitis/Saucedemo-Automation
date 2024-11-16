@@ -20,11 +20,11 @@ Scenario: User tries to log in with an empty password
 
 
 @UC-3
-Scenario: User should be able to to login by passing correct username and password
+Scenario: User should be able to login by passing correct username and password
     Given I open login page
     When I input username: "standard_user" and password: "secret_sauce"
     And I click on login button
     Then I should be redirected to inventory page
-    And dashboard title should "be equal to" "Swag Labs"
+    And I expect the dashboard title "be equal to" "Swag Labs"
 
 
