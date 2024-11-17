@@ -1,6 +1,6 @@
 const compareText = require("./utils/compare-text");
 const { Then } = require("@wdio/cucumber-framework");
-const { pages } = require("../po");
+const { pages } = require("../po/pages");
 
 Then("I should get an error message {string}", async function (errorText) {
   const errorMessage = await pages("login").loginForm.errorMessage.getText();

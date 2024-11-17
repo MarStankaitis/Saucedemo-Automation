@@ -1,4 +1,4 @@
-const { pages } = require("./../../po");
+const { pages } = require("./../../po/pages");
 
 async function clearInput(inputField) {
   inputField = inputField.toLowerCase();

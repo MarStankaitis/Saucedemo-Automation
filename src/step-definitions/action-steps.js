@@ -1,6 +1,6 @@
 const { Given, When } = require("@wdio/cucumber-framework");
 const clearInput = require("./utils/clear-input");
-const { pages } = require("../po");
+const { pages } = require("../po/pages");
 
 Given("I open login page", async function () {
   await pages("login").open();

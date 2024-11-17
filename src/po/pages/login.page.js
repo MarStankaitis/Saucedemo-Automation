@@ -1,10 +1,8 @@
 const { LoginForm, LoginHeader } = require("./../components");
 
 class LoginPage {
-  constructor() {
-    this.loginForm = new LoginForm();
-    this.loginHeader = new LoginHeader();
-  }
+  loginForm = new LoginForm();
+  loginHeader = new LoginHeader();
 
   async open() {
     await browser.url("https://www.saucedemo.com/");
